@@ -5,100 +5,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bisan Basnet | Portfolio</title>
+    <title>Bisan Basnet | Network & DevOps Engineer</title>
+    <meta name="description" content="Portfolio of Bisan Basnet - Network & DevOps Engineer specializing in Linux, Cloud, Docker, CI/CD, and Infrastructure.">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <h1>Bisan Basnet | Network & DevOps Engineer</h1>
+    <header id="header">
+        <nav class="nav-container">
+            <a href="#home" class="logo">Bisan Basnet <span>.dev</span></a>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
 
-        <section id="home">
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="badge">Network Engineer → DevOps Specialist</div>
+                <h1>Hi, I'm <span class="highlight">Bisan Basnet</span></h1>
+                <h2>Architecting Networks & Automating Cloud Infrastructure</h2>
+                <p>
+                    Passionate about bridging networking fundamentals with cloud automation, Linux administration,
+                    Docker containerization, and modern CI/CD pipelines.
+                </p>
 
-            <p>Hello, I'm</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
 
-            <h1>Bisan Basnet</h1>
-
-            <h2>Network Engineer → DevOps Engineer</h2>
-
-            <p>
-                I'm a network engineer building my skills in
-                Linux, Git, Docker, Cloud and DevOps.
-            </p>
-
-            <div>
-                <a href="#projects">View My Projects</a>
-                <a href="#contact">Contact Me</a>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <div class="underline"></div>
             </div>
 
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm a Network Engineer actively expanding into DevOps, Cloud Computing, and Infrastructure Automation.
+                        With a strong background in networking protocols and hardware, I bring a unique system-level perspective to cloud infrastructure.
+                    </p>
+                    <p>
+                        My focus areas include Linux server administration, version control with Git, containerization with Docker,
+                        and building robust CI/CD pipelines to streamline deployment workflows.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-num">3+</span>
+                            <span class="highlight-desc">Years Network Engineering</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-num">100%</span>
+                            <span class="highlight-desc">Infrastructure as Code focus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="about">
-
-            <h2>About Me</h2>
-
-            <p>
-                I'm a Network Engineer interested in building a career
-                in DevOps and cloud technologies.
-            </p>
-
-            <p>
-                I'm currently developing my skills in Linux, Git, Docker,
-                AWS, CI/CD and Infrastructure as Code.
-            </p>
-
-        </section>
-        <section id="skills">
-
-            <h2>My Skills</h2>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-title">
+                <h2>My Skills</h2>
+                <div class="underline"></div>
+            </div>
 
             <div class="skills-container">
 
-                <div class="skill">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
                     <h3>Networking</h3>
-                    <p>TCP/IP, Routing, Switching, VLANs, Fiber Networking</p>
+                    <p>TCP/IP, Routing, Switching, VLANs, BGP, Fiber Networking, Network Security</p>
                 </div>
 
-                <div class="skill">
+                <div class="skill-card">
+                    <div class="skill-icon">🐧</div>
                     <h3>Linux</h3>
-                    <p>Linux administration, Bash scripting, processes, permissions</p>
+                    <p>Linux Administration, Bash Scripting, Process Management, SystemD, Security Permissions</p>
                 </div>
 
-                <div class="skill">
+                <div class="skill-card">
+                    <div class="skill-icon">🔀</div>
                     <h3>Git & GitHub</h3>
-                    <p>Branches, commits, pull requests, merging and collaboration</p>
+                    <p>Branching strategies, Commit workflows, PR reviews, Git Ops, Conflict resolution</p>
                 </div>
 
-                <div class="skill">
-                    <h3>Docker</h3>
-                    <p>Containers, images, Dockerfiles and Docker Compose</p>
+                <div class="skill-card">
+                    <div class="skill-icon">🐳</div>
+                    <h3>Docker & Containers</h3>
+                    <p>Containerization, Dockerfiles, Multi-stage builds, Docker Compose, Microservices</p>
                 </div>
 
-                <div class="skill">
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
                     <h3>Cloud & DevOps</h3>
-                    <p>AWS, CI/CD, Infrastructure as Code and automation</p>
+                    <p>AWS (EC2, S3, VPC), GitHub Actions CI/CD, Terraform IaC, Monitoring & Automation</p>
                 </div>
 
             </div>
+        </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-tag">DevOps & Cloud</span>
+                        <h3>Automated CI/CD Deployment Pipeline</h3>
+                        <p>
+                            Designed a zero-downtime deployment pipeline using GitHub Actions, Docker, and AWS EC2.
+                            Automated unit testing, image building, and container updates on commit pushes.
+                        </p>
+                        <div class="project-tech">
+                            <span>GitHub Actions</span>
+                            <span>Docker</span>
+                            <span>AWS EC2</span>
+                            <span>Bash</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-tag">Infrastructure as Code</span>
+                        <h3>Multi-Region AWS VPC & Server Provisioning</h3>
+                        <p>
+                            Wrote modular Terraform manifests to provision secure AWS VPCs, public/private subnets,
+                            NAT gateways, and load-balanced Linux EC2 instances automatically.
+                        </p>
+                        <div class="project-tech">
+                            <span>Terraform</span>
+                            <span>AWS VPC</span>
+                            <span>Linux</span>
+                            <span>Security Groups</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-tag">Networking & Ops</span>
+                        <h3>Network Monitoring & Telemetry Dashboard</h3>
+                        <p>
+                            Deployed Prometheus and Grafana stack via Docker Compose to monitor router/switch metrics,
+                            latency SLA, packet drops, and bandwidth utilization with automated alerts.
+                        </p>
+                        <div class="project-tech">
+                            <span>Prometheus</span>
+                            <span>Grafana</span>
+                            <span>Docker Compose</span>
+                            <span>SNMP/Telemetry</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        Whether you want to discuss Network Architecture, DevOps implementation, or automation opportunities,
+                        feel free to reach out!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>bisan.basnet@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Kathmandu, Nepal</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💼</span>
+                            <span>Open to Network & DevOps Roles</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required placeholder="Project / Job Opportunity">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    <div class="form-status" id="form-status"></div>
+                </form>
+            </div>
         </section>
 
     </main>
+
+    <footer>
+        <p>&copy; 2026 Bisan Basnet. All rights reserved. | Built with HTML, CSS & JavaScript</p>
+    </footer>
 
 </body>
 
