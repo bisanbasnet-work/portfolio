@@ -133,6 +133,21 @@ header {
 .hamburger::before { top: -6px; }
 .hamburger::after { bottom: -6px; }
 
+.mobile-toggle.active .hamburger {
+    background: transparent;
+}
+
+.mobile-toggle.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.mobile-toggle.active .hamburger::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+
 /* Global Section Styling */
 .section {
     padding: 6rem 2rem;
@@ -201,6 +216,7 @@ header {
 .highlight {
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
