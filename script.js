@@ -49,7 +49,77 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach(section => observer.observe(section));
     }
 
-    // 3. Contact Form Submission Simulation
+    // 3. Work Experience Timeline Rendering
+    // Edit or add your work experiences in this list:
+    const experiences = [
+        {
+            role: 'Network Engineer',
+            company: 'GreenCube Technologies Pvt. Ltd.',
+            period: '2025 - Present',
+            isCurrent: true,
+            location: 'Kathmandu, Nepal (Hybrid)',
+            description: '• Configure, maintain, and troubleshoot enterprise network infrastructure including routers, switches, wireless access points, and network services.\n• Deploy and support network solutions for colleges, universities, and other organizational clients, including LAN, fiber, Wi-Fi, CCTV, and related infrastructure.\n• Perform network troubleshooting, device configuration, monitoring, and on-site technical support to maintain reliable connectivity and system availability.\n• Work with Linux, Docker, Git, and cloud/DevOps technologies as part of ongoing infrastructure and automation development.',
+            technologies: ['Networking', 'Routers & Switches', 'Ruijie', 'Wi-Fi', 'Fiber Optics', 'Linux', 'Docker', 'Git', 'AWS']
+        },
+    ];
+
+    const renderExperiences = () => {
+        const timelineEl = document.getElementById('experience-timeline');
+        if (!timelineEl) return;
+
+        timelineEl.innerHTML = experiences.map((exp, idx) => {
+            const isCurrent = exp.isCurrent || (exp.period && exp.period.toLowerCase().includes('present'));
+
+            // Format bullet points into list items
+            const descriptionLines = exp.description
+                .split('\n')
+                .map(line => line.trim())
+                .filter(line => line.length > 0);
+
+            const detailsHtml = descriptionLines.map(line => {
+                const cleanedLine = line.startsWith('•') || line.startsWith('-') ? line.substring(1).trim() : line;
+                return `<li>${cleanedLine}</li>`;
+            }).join('');
+
+            const techBadgesHtml = (exp.technologies || []).map(tech =>
+                `<span class="timeline-tech-tag">${tech.trim()}</span>`
+            ).join('');
+
+            return `
+                <div class="timeline-item" style="animation-delay: ${idx * 0.1}s;">
+                    <div class="timeline-dot ${isCurrent ? 'current' : ''}"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">${exp.role}</h3>
+                                <div class="timeline-company">
+                                    <span>🏢</span> ${exp.company}
+                                </div>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-period ${isCurrent ? 'current' : ''}">
+                                    ${isCurrent ? '⚡ ' : ''}${exp.period}
+                                </span>
+                                ${exp.location ? `<span class="timeline-location">📍 ${exp.location}</span>` : ''}
+                            </div>
+                        </div>
+                        <div class="timeline-details">
+                            <ul>${detailsHtml}</ul>
+                        </div>
+                        ${techBadgesHtml ? `
+                            <div class="timeline-tech">
+                                ${techBadgesHtml}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }).join('');
+    };
+
+    renderExperiences();
+
+    // 4. Contact Form Submission Simulation
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
 
@@ -57,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Disable submit button temporarily
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             if (submitBtn) submitBtn.disabled = true;
 
@@ -71,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (submitBtn) submitBtn.disabled = false;
 
-                // Clear success message after 5 seconds
                 setTimeout(() => {
                     formStatus.textContent = '';
                     formStatus.className = 'form-status';

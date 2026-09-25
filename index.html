@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Main branch update hello-->
+<!-- Main branch update -->
 
 
 <head>
@@ -38,6 +38,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -50,7 +51,7 @@
         <!-- Home / Hero Section -->
         <section id="home" class="hero-section">
             <div class="hero-content">
-                <div class="badge">Network Engineer → DevOps Specialist: Version A</div>
+                <div class="badge">Network Engineer → DevOps Specialist</div>
                 <h1>Hi, I'm <span class="highlight">Bisan Basnet</span></h1>
                 <h2>Architecting Networks & Automating Cloud Infrastructure</h2>
                 <p>
@@ -96,6 +97,20 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="section-title">
+                <h2>Work Experience</h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">My professional journey in Network Infrastructure, Systems Administration &
+                    DevOps</p>
+            </div>
+
+            <div id="experience-timeline" class="timeline-container">
+                <!-- Experiences will be dynamically rendered here via script.js -->
             </div>
         </section>
 
@@ -222,7 +237,20 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <span class="contact-icon">📧</span>
-                            <span>bisan.basnet00@gmail.com</span>
+                            <a href="mailto:bisan.basnet00@gmail.com" class="contact-link">bisan.basnet00@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="currentColor" class="linkedin-svg">
+                                    <path
+                                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                                </svg>
+                            </span>
+                            <a href="https://www.linkedin.com/in/bisan-basnet-4874b228b/" target="_blank"
+                                rel="noopener noreferrer" class="contact-link">
+                                linkedin.com/in/bisan-basnet <span class="ext-arrow">↗</span>
+                            </a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -238,11 +266,11 @@
                 <form class="contact-form" id="contact-form">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" required placeholder="John Doe">
+                        <input type="text" id="name" required placeholder="Bisan Basnet">
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email</label>
-                        <input type="email" id="email" required placeholder="john@example.com">
+                        <input type="email" id="email" required placeholder="bisan@example.com">
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
